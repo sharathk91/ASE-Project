@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Register</title>
+    <link href="css/cssforlogin.css" rel="stylesheet" />
+    <script src="js/validatedetails.js" ></script>
+</head>
+<body>
+<div id="login">
+
+    <form name="frmlogin" action="index.html" onsubmit="return validateDetails()" method="post">
+
+        <table width="600" align="center" cellpadding="5" cellspacing="5" border="0" class="becomeameberbg">
+
+            <tr bgcolor="#666666">
+                <td align="center" colspan="2"><strong><font color="#FFFFFF">SignInForm </font></strong></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">First Name:</td>
+                <td width="391">
+
+                    <input type="text" class="feedbackinput" size="40" name="firstname" id="firstname" onkeypress="textcheck()" />
+
+                </td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Last Name:</td>
+                <td width="391"><input type="text" class="feedbackinput" size="40" name="lastname" id="lastname" onkeypress="textcheck()"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">User Name:</td>
+                <td width="391"><input type="text" class="feedbackinput" size="40" name="username" id="username"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">password:</td>
+                <td width="391"><input type="password" class="feedbackinput" size="40" name="password" id="password"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Phone:</td>
+                <td width="391">
+                    <input type="text" class="feedbackinput" size="20" name="phone" id="phone" onkeypress="numcheck()"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Email:</td>
+                <td width="391"><input type="email" class="feedbackinput" size="30" name="email2" id="email"  /></td>
+            </tr>
+
+            <tr bgcolor="#666666">
+                <td align="center" colspan="2"><strong><font color="#FFFFFF">Mailing Information</font></strong></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Address:</td>
+                <td width="391"><input type="text" class="feedbackinput" size="40" name="address" id="address" /></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">City:</td>
+                <td width="391"><input type="text" class="feedbackinput" size="20" name="city" id="city" onkeypress="textcheck()"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">State/Province:</td>
+                <td width="391"><input type="text" class="feedbackinput" size="20" name="state" id="state" onkeypress="textcheck()"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Postal Code</td>
+                <td width="391"><input type="text" class="feedbackinput" size="20" name="postelcode" id="postelcode" onkeypress="numcheck()"/></td>
+            </tr>
+
+            <tr>
+                <td width="174" align="right">Country</td>
+                <td width="391">
+                    <select id="country_code" name="country_code" class="feedbackinput"><option value="">-- Choose a Country --</option><option value="US" selected>United States</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan Republic</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BB">Barbados</option><option value="BE">Belgium</option><option value="BZ">Belize</option></select>
+                </td>
+            </tr>
+            <td height="20" colspan="2" align="center">
+
+                <input type="submit" value="Submit" name="sub" class="button" alt="Register" />
+            </td>
+
+            </tr>
+
+
+        </table>
+
+    </form>
+</div>
+
+
+</body>
+</html>

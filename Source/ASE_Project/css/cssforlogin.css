@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+/*login */
+#login {
+    width:900px;
+    height:600px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color:white;
+    border: 1px solid black;
+
+}
+#login table {
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:14px;
+    border:1px;
+
+}
+#login input {
+    height:20px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#000;
+}
+#login textarea {
+    border-style:solid;
+    border-width:1px;
+    border-color:#000;
+}
+#login .button {
+    height:25px;
+    width:80px;
+    border-style:solid;
+    border-width:1px;
+    border-color:#36F;
+    background-color:black;
+    color:white;
+}
+
+.top-content{
+    position:absolute;
+    top: 17px;
+    left:417px;
+}
+.main{
+
+    background-color: #66afe9;
+}
