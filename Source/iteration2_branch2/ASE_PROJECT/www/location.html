@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+
+  <script>
+var lati;
+var longi;
+/*
+    function getLoc() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+
+    function showPosition(position) {
+      lati = position.coords.latitude;
+      longi = position.coords.longitude;
+      document.getElementById("demo").innerHTML = "Latitude: " + lati +
+        "<br>Longitude: " + longi;
+      initMap();
+    }*/
+
+    function initMap() {
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+
+    }
+
+function showPosition(position) {
+  lati = position.coords.latitude;
+  longi = position.coords.longitude;
+  document.getElementById("demo").innerHTML = "Latitude: " + lati +
+    "<br>Longitude: " + longi;
+
+  var uluru = {lat: lati , lng: longi};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+
+}
+
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfgw9klyrWGT4oR6rZH09ffY3KWZRB-Gg&callback=initMap">
+  </script>
+  <link href="home.css" rel="stylesheet"/>
+</head>
+<body>
+<h3>Google Maps</h3><br/>
+<div>
+<div align="right"><input type="button" class="button" onclick="location.href = 'index.html';" value="Logout" align="right"/><br/></div>
+<p id="demo"></p>
+<div id="map"></div>
+</div>
+</body>
+</html>
