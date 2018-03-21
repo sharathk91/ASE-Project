@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header{
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    height: 60px;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#body {
+    border-radius: 5px;
+    background-color:white;
+    height: 450px;
+    width: 900px;
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid black;
+}
+#footer {
+    border-radius: 5px;
+    height:40px;
+    border: 1px solid black;
+    width:900px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    margin: auto;
+    color:black;
+}
