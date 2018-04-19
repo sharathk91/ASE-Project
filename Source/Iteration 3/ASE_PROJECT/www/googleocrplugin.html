@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/googleocrplugin.js"></script>
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="ng-cordova.js"></script>
+  <script src="cordova.js"></script>
+  <link href="home.css" rel="stylesheet"/>
+  <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"> -->
+</head>
+<body ng-app="googleocr">
+
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <h3 align="center" class="title" style="color: saddlebrown"> Image to Text Analysis </h3>
+  </ion-header-bar>
+  <ion-content ng-controller="googleocrcontrol">
+
+    <div align="center">
+
+      <button ng-click="upload()" class="button">
+        Take Photo
+      </button>
+
+      <button ng-click="choose()" class="button">
+        Choose Photo
+      </button>
+
+      <button onclick="location.href = 'index.html';"  class="button"> Logout </button>
+
+      <br/><br/>
+      <img style="width: 150px;height:150px;display: none" id="capture" ng-model="capture" src=""><br/><br/>
+      <button ng-click="GetText()" id="Analyse" class="button" style="display: none">
+        Analyse Text
+      </button>
+      <br/>
+      <p style="display: none" id="sourcetext"></p>
+
+
+    </div>
+
+  </ion-content>
+</ion-pane>
+</body>
+</html>
