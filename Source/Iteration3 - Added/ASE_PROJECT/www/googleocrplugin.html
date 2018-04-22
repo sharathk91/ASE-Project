@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <script src="js/angular.min.js"></script>
+  <script src="js/googleocrplugin.js"></script>
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script src="ng-cordova.js"></script>
+  <script src="cordova.js"></script>
+  <link href="home.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/TranslateText.js"></script>
+  <!--<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"> -->
+</head>
+<body ng-app="googleocr">
+
+<ion-pane>
+  <ion-header-bar class="bar-stable">
+    <h3 align="center" class="title" style="color: saddlebrown"> Image to Text Analysis </h3>
+  </ion-header-bar>
+  <ion-content ng-controller="googleocrcontrol">
+
+    <div align="center">
+
+      <button ng-click="upload()" class="button">
+        Take Photo
+      </button>
+
+      <button ng-click="choose()" class="button">
+        Choose Photo
+      </button>
+
+      <button onclick="location.href = 'index.html';"  class="button"> Logout </button>
+
+      <br/><br/>
+      <img style="width: 150px;height:150px;display: none" id="capture" ng-model="capture" src=""><br/><br/>
+      <button ng-click="GetText()" id="Analyse" class="button" style="display: none">
+        Analyse Text
+      </button>
+      <br/>
+
+      <p id = "Extracted_Text"></p>
+
+    </div>
+
+    <div>
+      <div class="lang_select">
+        <div class = "col-md-4 col-md-offset-4">
+          <select id = "translate_from">
+            <option>Choose a Language</option>
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese (Mandarin)</option>
+            <option value="hr">Croation</option>
+            <option value="cs">Czech</option>
+            <option value="da">Danish</option>
+            <option value="nl">Dutch</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="el">Greek</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+            <option value="te">Telugu</option>
+
+          </select>
+
+          <select id = 'translate_to'>
+            <option>Choose a Language to Translate</option>
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese (Mandarin)</option>
+            <option value="hr">Croation</option>
+            <option value="cs">Czech</option>
+            <option value="da">Danish</option>
+            <option value="nl">Dutch</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="el">Greek</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+            <option value="te">Telugu</option>
+
+          </select>
+
+        </div>
+      </div>
+
+
+      <div class = "container" style="margin:45px auto">
+        <div class = 'row'>
+          <div class = "col-md-4 col-md-offset-4">
+            <p>Enter Here to Translate</p>
+            <textarea id = 'src_lang' class = 'textarea' placeholder="Enter Text here to Translate!"></textarea>
+          </div>
+        </div>
+
+
+        <div class = 'row'>
+          <div class = "col-md-4 col-md-offset-4">
+            <p>Translated Text</p>
+            <textarea id = 'dest_lang' class = 'textarea' placeholder="Translated Text!" name="text"></textarea>
+          </div>
+          <a href="#" class="say">Speech</a>
+        </div>
+        <div class = "col-md-4 col-md-offset-4">
+          <button onclick="translateText(document.getElementById('src_lang').value)">Translate</button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </ion-content>
+</ion-pane>
+</body>
+</html>
